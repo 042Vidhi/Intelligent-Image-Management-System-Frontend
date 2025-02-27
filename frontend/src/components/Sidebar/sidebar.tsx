@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search } from "lucide-react"
+import {  Home, Inbox, Search } from "lucide-react"
 import Link from "next/link"
 import {
   Sidebar,
@@ -14,19 +14,14 @@ import {
 // Menu items.
 const items = [
   {
-    title: "My Files",
-    url: "/pages/myFiles",
+    title: "Upload",
+    url: "/pages/upload",
     icon: Home,
   },
   {
     title: "All Files",
     url: "/pages/allFiles",
     icon: Inbox,
-  },
-  {
-    title: "Organise Files",
-    url: "/pages/organiseFiles",
-    icon: Calendar,
   },
   {
     title: "Search Files",
@@ -40,11 +35,15 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel className="py-10">
+            <div className="text-sm font-semibold text-2xl text-black">
+            TagAI
+            </div>
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem key={item.title} >
                   <SidebarMenuButton asChild>
                     <Link href={item.url}>
                       <item.icon />
