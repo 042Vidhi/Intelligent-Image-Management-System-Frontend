@@ -36,7 +36,7 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel className="py-10">
-            <div className="text-sm font-semibold text-2xl text-black">
+            <div className="font-semibold text-2xl text-black">
             TagAI
             </div>
           </SidebarGroupLabel>

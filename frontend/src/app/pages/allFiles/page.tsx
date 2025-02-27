@@ -21,6 +21,7 @@ export default function AllFiles() {
         try {
             const response = await fetch("http://localhost:5000/getAllImages");
             const data = await response.json();
+            console.log("API Response in get all images:", data);
             setLoading(false);
             if (!data.error) {
                 setImages(data.data);
@@ -52,7 +53,9 @@ export default function AllFiles() {
                     <h2 className="font-medium">All Files</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {images.map((image) => (
-                            <div key={image.id} className="bg-gray-100 p-3 rounded-lg shadow-md">
+                            <div key={image.id} className="bg-gray-100 p-3 rounded-xl cursor-pointer shadow-md"
+                                onClick={() => setSelectedImage(image)}
+                            >
                                 <img
                                     src={image.url}
                                     alt={image.filename}
@@ -77,18 +80,22 @@ export default function AllFiles() {
             )}
 
             {/* Full-Screen Image Modal */}
+            {/* Full-Screen Image Modal */ }
             {selectedImage && (
                 <div
                     className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50 overflow-auto"
-                    onClick={() => setSelectedImage(null)}
+                    onClick={() => setSelectedImage(null)} // Clicking outside will close
                 >
-                    <img
-                        src={selectedImage.url}
-                        alt={selectedImage.filename}
-                        className="w-[100%] max-h-full object-contain"
-                    />
+                    
+                        <img
+                            src={selectedImage.url}
+                            alt={selectedImage.filename}
+                            className="w-[90vw] max-h-[90vh] object-contain"
+                        />
+                    
                 </div>
             )}
+
         </div>
     );
 }

@@ -3,6 +3,7 @@
 import ImageModifications from '@/components/imageModifications';
 import React, { useState } from "react";
 import { PacmanLoader } from "react-spinners";
+import { toast } from "sonner"
 
 interface ImageData {
   file: File;
@@ -50,10 +51,12 @@ const MyFiles: React.FC = () => {
         });
 
         setLoading(false);
+        toast.success("Image uploaded successfully!");
       })
       .catch((error) => {
         console.error("Error fetching image tags:", error);
         setLoading(false);
+        toast.warning('Failed to upload image. Please try again later.');
       });
   };
   //save the image to the database
@@ -82,8 +85,10 @@ const MyFiles: React.FC = () => {
       console.log("API Response:", result);
       
       setFile(result.data);
+      toast.success("Image saved successfully!");
     } catch (error) {
       console.error("Error saving image:", error);
+      toast.warning('Failed to save image. Please try again later.');
     } finally {
       setFileLoading(false);
     }

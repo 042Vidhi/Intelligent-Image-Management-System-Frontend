@@ -5,7 +5,7 @@ import { useEffect } from "react"
 export default function Home() {
   const Router = useRouter()
   useEffect(() => {
-    Router.push("/pages/myFiles")
+    Router.push("/pages/upload")
   }, [])
 
   return (
