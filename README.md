@@ -43,18 +43,12 @@ Later, when you search for `"Noddy"`, the system will instantly retrieve **all i
 
 ---
 
-## **▶ Demo Video**  
-
-
----
-
 ## **🛠 Steps to Run the Code**  
-
----
 
 ### **🚀 Running the Backend**  
 
-#### **1️⃣ Clone the Backend Repository**  
+#### **1️⃣ Fork & Clone the Backend Repository**  
+Repository Link : https://github.com/042Vidhi/Intelligent-Image-Management-System-Backend
 ```sh
 git clone https://github.com/your-username/Intelligent-Image-Management-System-Backend.git
 cd backend
@@ -85,7 +79,8 @@ docker-compose up --build
 
 ### **🎨 Running the Frontend**  
 
-#### **1️⃣ Clone the Frontend Repository**  
+#### **1️⃣ Fork & Clone the Frontend Repository**  
+Repository Link : https://github.com/042Vidhi/Intelligent-Image-Management-System-Frontend
 ```sh
 git clone https://github.com/your-username/Intelligent-Image-Management-System-Frontend.git
 git checkout master
