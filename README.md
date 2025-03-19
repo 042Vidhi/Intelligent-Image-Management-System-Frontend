@@ -29,7 +29,7 @@ However, the AI doesn’t know **your pet’s name is Noddy**! To personalize th
 #### **🔍 Searching for "Noddy"**  
 Later, when you search for `"Noddy"`, the system will instantly retrieve **all images tagged with "Noddy"**, making it super easy to find all your pet’s pictures without scrolling endlessly through your gallery.  
 
-💡 **This feature is extremely useful for organizing photos of specific events, people, places, or objects by adding custom tags!**
+💡 This feature is extremely useful for organizing photos of specific events, people, places, or objects by adding custom tags!
 ---
 
 
